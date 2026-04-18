@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs - Fishy Linux</title>
+    <link rel="icon" type="image/png" href="Assets/fishy.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            margin-top: 80px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid #111;
+            padding-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-sans);
+            font-weight: 300;
+            color: #aeaeae;
+        }
+
+        .doc-section {
+            margin-bottom: 60px;
+        }
+
+        .doc-section h2 {
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .doc-section h3 {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .doc-section p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #0c0c0c;
+            border: 1px solid #1a1a1a;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+            color: #aeaeae;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+        code {
+            color: #aeaeae;
+            background: #111;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="index.html" class="brand">
+                <img src="Assets/fishy.png" alt="Fishy Linux">
+                fishy
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">home</a></li>
+                <li><a href="releases.html">releases</a></li>
+                <li><a href="docs.html" style="color: var(--accent);">docs</a></li>
+            </ul>
+        </nav>
+
+        <header class="page-header">
+            <h1>documentation.</h1>
+        </header>
+
+        <section class="doc-section">
+            <h2>installation</h2>
+            <p>installation is handled via the debian installer for maximum compatibility and minimal overhead. boot
+                from the live media and select the install option from the grub menu.</p>
+
+            <h3>iso verification</h3>
+            <p>before flashing, ensure the iso is not corrupted. verify the sha256 checksum.</p>
+            <pre><code>sha256sum fishy-linux.iso</code></pre>
+            <p>compare the output with the hash provided on the release page.</p>
+        </section>
+
+        <section class="doc-section">
+            <h2>custom commands</h2>
+            <p>fishy ship minimal wrappers to make your life easier in the terminal.</p>
+
+            <h3>system update</h3>
+            <p>updates the system packages, resolving dependencies quietly.</p>
+            <pre><code>sudo update</code></pre>
+
+            <h3>system info</h3>
+            <p>displays system resources and distribution info using the fishyfetch script.</p>
+            <pre><code>fishyfetch</code></pre>
+
+            <h3>flatpak setup</h3>
+            <p>installs flatpak, adds the flathub repository, and sets up integrating components.</p>
+            <pre><code>flatpak-setup</code></pre>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>developed by <a href="https://nixovena.org" style="color: inherit; text-decoration: underline;">nixovena labs</a>.</p>
+            <p>debian-based. free.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

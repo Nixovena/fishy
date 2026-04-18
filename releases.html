@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Releases - Fishy Linux</title>
+    <link rel="icon" type="image/png" href="Assets/fishy.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            margin-top: 80px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid #111;
+            padding-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-sans);
+            font-weight: 300;
+            color: #aeaeae;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 40px 0 80px 0;
+            padding-left: 20px;
+            border-left: 1px solid #1a1a1a;
+        }
+
+        .release {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .release::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .release-version {
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            color: #aeaeae;
+            font-weight: 400;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .release-tag {
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            background-color: #111;
+            border: 1px solid #222;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+        }
+
+        .release-changes {
+            list-style-type: none;
+            margin-top: 15px;
+            color: var(--text-secondary);
+        }
+
+        .release-changes li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .release-changes li::before {
+            content: '-';
+            position: absolute;
+            left: 0;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="index.html" class="brand">
+                <img src="Assets/fishy.png" alt="Fishy Linux">
+                fishy
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">home</a></li>
+                <li><a href="releases.html" style="color: var(--accent);">releases</a></li>
+                <li><a href="docs.html">docs</a></li>
+            </ul>
+        </nav>
+
+        <header class="page-header">
+            <h1>releases.</h1>
+        </header>
+
+        <div class="timeline">
+            <div class="release">
+                <div class="release-version">
+                    2.5 <span class="release-tag">"orfish"</span>
+                </div>
+                <ul class="release-changes">
+                    <li>fixed debian installer sudo bug</li>
+                </ul>
+            </div>
+
+            <div class="release">
+                <div class="release-version">
+                    2.0 <span class="release-tag">"orfish"</span>
+                </div>
+                <ul class="release-changes">
+                    <li>switched default desktop environment from openbox to lxqt</li>
+                    <li>minor bug fixes implemented across the system</li>
+                    <li>added custom setup command: <code>flatpak-setup</code></li>
+                </ul>
+            </div>
+
+            <div class="release">
+                <div class="release-version">
+                    1.0 <span class="release-tag">"betta"</span>
+                </div>
+                <ul class="release-changes">
+                    <li>initial stable release of fishy linux</li>
+                    <li>shipped with openbox desktop environment</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>developed by <a href="https://nixovena.org" style="color: inherit; text-decoration: underline;">nixovena labs</a>.</p>
+            <p>debian-based. free.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
