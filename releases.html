@@ -110,6 +110,25 @@
         <div class="timeline">
             <div class="release">
                 <div class="release-version">
+                    3.0 <span class="release-tag">"murky"</span>
+                </div>
+                <ul class="release-changes">
+                    <li>focused entirely on revitalizing older systems with this major update</li>
+                    <li>significantly improved performance on older systems, simplified zram usage, and resolved various issues</li>
+                    <li>achieved noticeable performance gains and desktop fluidity by using custom performance parameters instead of default kernel settings</li>
+                    <li>disabled spectre/meltdown mitigations, providing around 15% cpu gain on older systems (an acceptable security trade-off for personal use)</li>
+                    <li>added <code>mitigations-settings</code> script for modern systems or security-conscious users to easily enable mitigations; recommends correct settings based on processor year and model</li>
+                    <li>updated lxqt and desktop theme</li>
+                    <li>fixed debian installer locale issue</li>
+                    <li>introduced new <code>zram-settings</code> script for easy zram installation and management</li>
+                    <li>disabled unnecessary systemd services by default</li>
+                    <li>expanded driver support and resolved certain conflicts</li>
+                    <li>completely redesigned fishy fetch (fishyfetch) from scratch</li>
+                </ul>
+            </div>
+
+            <div class="release">
+                <div class="release-version">
                     2.5 <span class="release-tag">"orfish"</span>
                 </div>
                 <ul class="release-changes">
